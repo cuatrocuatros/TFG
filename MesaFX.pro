@@ -19,6 +19,12 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
+win64 { # I am not sure, if win64 is valid condition...
 INCLUDEPATH += "C:\\Program Files\\Csound6_x64\\include\\csound"
+LIBS += L "C:\\Program Files\\Csound6_x64\\bin" # capital L for setting library path
+}
 
-LIBS +=  "C:\\Program Files\\Csound6_x64\\bin"
+linux {
+	linux: INCLUDEPATH += /usr/local/include/csound
+}
+linux|win32|win64: LIBS += -lcsound64 # lowercase l for including the library
