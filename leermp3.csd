@@ -18,7 +18,7 @@ nchnls = 2
 0dbfs = 1
 
 
-schedule 1,0,10 ; play instrument 1 for 10 seconds
+;schedule 1,0,10 ; play instrument 1 for 10 seconds
 
 instr 1
 
@@ -37,6 +37,7 @@ endin
 
 <CsScore>
 
+i 1 0 10 ; for testing just for 5 seconds, otherwise may freeze the UI if not run in separate thread
 
 </CsScore>
 
